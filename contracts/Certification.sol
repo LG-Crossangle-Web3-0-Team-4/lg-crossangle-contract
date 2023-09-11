@@ -97,12 +97,11 @@ contract SBT is ERC721, ERC721Enumerable, Ownable {
         super._beforeTokenTransfer(from, to, tokenId);
     }
 
-    function supportsInterface(bytes4 _interfaceId)
-        public
-        view
-        override(ERC721, ERC721Enumerable)
-        returns (bool)
-    {
-        return _interfaceId == type(IERC5192).interfaceId || super.supportsInterface(_interfaceId);
+    function supportsInterface(
+        bytes4 _interfaceId
+    ) public view override(ERC721, ERC721Enumerable) returns (bool) {
+        return
+            _interfaceId == type(IERC5192).interfaceId ||
+            super.supportsInterface(_interfaceId);
     }
 }
