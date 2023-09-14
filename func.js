@@ -41,9 +41,7 @@ export const loadData = async () => {
   await loadWeb3();
 
   const Contract_Transfer = new Contract(Transfer.output.abi, Contract_Address);
-
   const addressAccount = await window.web3.eth.getCoinbase();
-
   const Owner = await Contract_Transfer.methods.owner().call();
 
   return { Contract_Transfer, addressAccount, Owner };
