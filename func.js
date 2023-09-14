@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import Transfer from "./ABI/transfer.json";
 
-const POLYGON_TESTNET_RPC = ""; // get from infura
+const POLYGON_TESTNET_RPC = ""; // from infura
 
 const Contract = require("web3-eth-contract");
 
